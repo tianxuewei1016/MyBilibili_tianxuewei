@@ -1,5 +1,6 @@
 package com.mybilibili_tianxuewei.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,14 @@ public abstract class BaseActivity extends AppCompatActivity {
     //弹出吐司
     public void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    /**
+     *
+     * @param activityClazz
+     */
+    public void startActivity(Class activityClazz) {
+        startActivity(new Intent(this, activityClazz));
     }
 
     @Override
