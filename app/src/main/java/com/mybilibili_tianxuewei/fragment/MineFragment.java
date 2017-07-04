@@ -1,5 +1,6 @@
 package com.mybilibili_tianxuewei.fragment;
 
+import com.mybilibili_tianxuewei.R;
 import com.mybilibili_tianxuewei.base.BaseFragment;
 
 /**
@@ -11,7 +12,7 @@ import com.mybilibili_tianxuewei.base.BaseFragment;
 public class MineFragment extends BaseFragment{
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.fragment_mine;
     }
 
     @Override

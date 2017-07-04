@@ -9,4 +9,8 @@
     <color name="bottombar_tab_off">#2f2005</color>
     <color name="text_color_c5">#c5c5c5</color>
     <color name="table_bg_color">#11000000</color>
+    <color name="text_black">#000000</color>
+    <string name="mine_name">未指定</string>
+    <color name="text_gray">#a3a3a3</color>
+    <color name="order_tourism_line">#c6c6c6</color>
 </resources>

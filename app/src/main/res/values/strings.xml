@@ -4,4 +4,9 @@
     <string name="home_page">首页</string>
     <string name="customer_service">客服</string>
     <string name="mine">个人中心</string>
+    <string name="check_person_info">查看并编辑个人资料</string>
+    <string name="my_order">我的订单</string>
+    <string name="feed_back">向我们反馈</string>
+    <string name="about_us">关于我们</string>
+    <string name="mine_bottom_text">马上关注新绎旅游【ennovatourism】微信公众号\n&#160;&#160;&#160;&#160;&#160;&#160;&#160;即时获得最新活动讯息，尽享便捷优惠</string>
 </resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/x20"
+    android:paddingRight="@dimen/x15">
+
+    <RelativeLayout
+        android:id="@+id/rl_check_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y100">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mine_name"
+            android:textColor="@color/text_black"
+            android:textSize="19sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="@dimen/y30"
+            android:text="@string/check_person_info"
+            android:textColor="@color/text_gray"
+            android:visibility="gone"/>
+
+        <com.mybilibili_tianxuewei.widget.CircleImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="@dimen/x100"
+            android:layout_height="@dimen/y100"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/headimage1"
+            />
+    </RelativeLayout>
+    <!--//我的订单-->
+
+    <RelativeLayout
+        android:id="@+id/rl_my_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y80">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_order"
+            android:textColor="@color/text_black"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/order_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_marginTop="@dimen/y45"
+        android:background="@color/order_tourism_line" />
+    <!--//向我们反馈-->
+
+    <RelativeLayout
+        android:id="@+id/rl_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y80">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/feed_back"
+            android:textColor="@color/text_black"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/feedback" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_marginTop="@dimen/y45"
+        android:background="@color/order_tourism_line" />
+    <!--//关于我们-->
+
+    <RelativeLayout
+        android:id="@+id/rl_aboutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y80">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_us"
+            android:textColor="@color/text_black"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/about_us" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y1"
+        android:layout_marginTop="@dimen/y45"
+        android:background="@color/order_tourism_line" />
+
+    <TextView
+        android:layout_width="727px"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_gray"
+        android:layout_marginTop="@dimen/y90"
+        android:layout_gravity="center"
+        android:text="@string/mine_bottom_text"
+        android:textSize="11sp"
+        android:lineSpacingExtra="5dp"/>
+</LinearLayout>

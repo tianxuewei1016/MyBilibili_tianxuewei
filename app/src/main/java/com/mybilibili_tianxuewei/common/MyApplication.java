@@ -18,5 +18,7 @@ public class MyApplication extends Application{
         super.onCreate();
         //初始化logger打日志工具
         Logger.addLogAdapter(new AndroidLogAdapter());
+
+
     }
 }
