@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <ImageView
+            android:id="@+id/comprehensive_item_iv"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_movie_pay_failed" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/table_bg_color">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_notification_action_play" />
+
+            <TextView
+                android:paddingRight="6dp"
+                android:id="@+id/comprehensive_item_tv_paly"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:text="数量"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <ImageView
+
+                android:layout_width="16dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_live_player_audience" />
+
+            <TextView
+                android:paddingLeft="2dp"
+                android:id="@+id/comprehensive_item_tv_tid"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="tid"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/comprehensive_item_tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:paddingRight="6dp"
+                android:text="时间"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/comprehensive_item_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:maxLines="2"
+        android:padding="6dp"
+        android:text="标题"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/comprehensive_item_tv_dec"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:maxLines="1"
+        android:padding="6dp"
+        android:text="标题"
+        android:textSize="16sp" />
+</LinearLayout>
