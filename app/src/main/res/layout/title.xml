@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginLeft="-26dp"
+    android:background="@color/default_color"
+    android:fitsSystemWindows="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/title_left_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="6dp"
+                android:src="@drawable/ic_navigation_drawer" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/title_iv_default_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bili_default_avatar" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignRight="@+id/title_iv_default_avatar"
+                    android:background="@drawable/title_iv_shape" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="未登录"
+                android:textColor="@android:color/white"
+                android:textSize="26sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/title_iv_game"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/ic_menu_top_game_center" />
+
+        <ImageView
+            android:id="@+id/title_iv_download"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/ic_toolbar_menu_download" />
+
+        <ImageView
+            android:id="@+id/title_iv_right_search"
+            android:layout_width="32dp"
+            android:layout_height="36dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/ic_toolbar_menu_search" />
+    </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>
