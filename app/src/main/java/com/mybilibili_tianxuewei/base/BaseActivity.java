@@ -43,7 +43,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     /**
-     *
      * @param activityClazz
      */
     public void startActivity(Class activityClazz) {

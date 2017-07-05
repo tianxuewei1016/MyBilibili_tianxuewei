@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mybilibili_tianxuewei.common.MyApplication;
+import com.squareup.leakcanary.RefWatcher;
+
 import butterknife.ButterKnife;
 
 /**
@@ -46,7 +49,7 @@ public abstract class BaseFragment extends Fragment {
             view.setText("布局还没有创建......");
             return view;
         }
-        View view = View.inflate(context, BaseFragment.this.getLayoutId(), null);
+        View view = View.inflate(getActivity(), BaseFragment.this.getLayoutId(), null);
         ButterKnife.bind(BaseFragment.this, view);
         initView();
         return view;
@@ -71,7 +74,7 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void initData();
 
     //弹出吐司
-    public void showToast(String message){
+    public void showToast(String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 
@@ -79,5 +82,15 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
+    }
+
+    /**
+     * 检测Fragment中的内存泄漏问题
+     */
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        RefWatcher refWatcher = MyApplication.getRefWatcher(context);
+        refWatcher.watch(this);
     }
 }

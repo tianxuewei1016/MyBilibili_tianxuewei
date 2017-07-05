@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import com.mybilibili_tianxuewei.R;
 import com.mybilibili_tianxuewei.base.BaseActivity;
 import com.mybilibili_tianxuewei.base.BaseFragment;
+import com.mybilibili_tianxuewei.common.AppManager;
 import com.mybilibili_tianxuewei.fragment.CustomerServiceFragment;
 import com.mybilibili_tianxuewei.fragment.HomePageFragment;
 import com.mybilibili_tianxuewei.fragment.MineFragment;
@@ -28,6 +29,7 @@ public class MainActivity extends BaseActivity {
     FrameLayout content;
     @Bind(R.id.rg_tab)
     RadioGroup rgTab;
+
     /**
      * 装各个Fragment的集合
      */
@@ -57,7 +59,6 @@ public class MainActivity extends BaseActivity {
         fragments.add(new HomePageFragment());
         fragments.add(new CustomerServiceFragment());
         fragments.add(new MineFragment());
-
     }
 
     @Override
@@ -82,6 +83,13 @@ public class MainActivity extends BaseActivity {
         });
         //默认选中首页-放在setOnCheckedChangeListener 执行之后
         rgTab.check(R.id.rb_homepage);
+    }
+
+    private Fragment getFragment(int position) {
+        if (fragments != null && fragments.size() > 0) {
+            return fragments.get(position);
+        }
+        return null;
     }
 
     private void switchFragment(Fragment currentFragment) {
@@ -111,19 +119,6 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    /**
-     * 根据位置得到Fragment
-     *
-     * @param position
-     * @return
-     */
-    private Fragment getFragment(int position) {
-        if (fragments != null && fragments.size() > 0) {
-            return fragments.get(position);
-        }
-        return null;
-    }
-
     /*
     * 双击退出
     * */
@@ -147,5 +142,11 @@ public class MainActivity extends BaseActivity {
             return true;
         }
         return super.onKeyUp(keyCode, event);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        AppManager.getInstance().removeActivity(this);
     }
 }

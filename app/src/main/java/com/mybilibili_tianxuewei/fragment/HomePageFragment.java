@@ -19,6 +19,8 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 
+import static com.mybilibili_tianxuewei.R.id.coordinator_layout;
+
 /**
  * 作者：田学伟 on 2017/7/4 13:36
  * QQ：93226539
@@ -45,7 +47,7 @@ public class HomePageFragment extends BaseFragment {
     AppBarLayout appbarLayout;
     @Bind(R.id.main_tab_viewpager)
     ViewPager mainTabViewpager;
-    @Bind(R.id.coordinator_layout)
+    @Bind(coordinator_layout)
     CoordinatorLayout coordinatorLayout;
     @Bind(R.id.navigation)
     NavigationView navigation;
@@ -77,7 +79,6 @@ public class HomePageFragment extends BaseFragment {
         fragments.add(new ReseedingActivity());//追播
         fragments.add(new PartitionActivity());//分区
         fragments.add(new DiscoveryActivity());//发现
-
     }
 
     private void initListener() {

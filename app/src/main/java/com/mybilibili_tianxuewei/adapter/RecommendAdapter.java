@@ -59,6 +59,7 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.MyVi
         }
         holder.comprehensiveItemTvTid.setText(dataBean.getTid() + "");
         holder.comprehensiveItemTvDuration.setText(timeUtils.stringForTime(dataBean.getDuration() * 1000));
+
     }
 
     @Override
